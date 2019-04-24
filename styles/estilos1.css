@@ -1,0 +1,149 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    font-family: "Noto Sans";
+    color: #cccccc;
+    background: #0e0016;
+}
+
+header, table, section, footer, aside, nav, article, figure, figcaption, label {
+    display: block;
+    border-radius: 1rem;
+    }
+
+#agrupar {
+    background-image: -moz-radial-gradient(center, #0e0016,indigo,#0e0016);
+    width: 90%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#cabecera {
+    background: #0e0016;
+    border: .1rem solid indigo;
+    padding: 1rem;
+}
+#logo {
+    float: left;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 4rem;
+}
+#titulo {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-shadow: indigo 8px 6px 6px;
+    color: #cccccc;
+}
+#menu {
+    float: right;
+    width: 20%;
+    min-width: 200px;
+}
+
+#menu li {
+    font-size: 1.2rem;
+    list-style-type: none;
+    border-radius: 1rem;
+    background: #0e0016;
+    margin: .8rem 0rem;
+    padding: .4rem 1rem; /* arriba, derecha, abajo, izquierda*/
+    border: .1rem solid indigo;
+}
+#menu a {
+    display: block;
+}
+
+a:hover {
+    color: yellow;
+}
+
+#seccion {
+    float: left;
+    width: 70%;
+    min-width: 240px;
+    margin: .8rem 0rem;
+    padding: .4rem .6rem;
+    background-color: grey;
+    opacity: .6;
+    color: indigo;
+}
+
+#boxformc {
+    float: left;
+    text-align: left;
+    width: 30%;
+    min-width: 220px;
+    margin: .8rem auto .8rem auto;
+    padding: 1rem 1rem;
+    background-color: grey;
+    opacity: .6;
+    color: indigo;
+}
+
+input, textarea {
+    margin: .2rem .6rem .4rem 0rem; /* arriba, derecha, abajo, izquierda*/
+    padding: .3rem .3rem;
+    border-radius: .6rem;
+}
+textarea {
+    width: 90%;
+}
+
+input:required:focus {
+    background-color: gold;
+    font-weight: bold;
+}
+input:valid, textarea:valid, #vaciar {
+    border-color: darkgreen;
+    background-color: greenyellow;
+    color: darkgreen;
+}
+input:invalid, textarea:invalid {
+    border-color: red;
+    background-color: gold;
+}
+
+#lateral {
+    float: right;
+    width: 20%;
+    min-width: 240px;
+    margin: .8rem 0rem;
+    padding: .4rem;
+    background-color: grey;
+    opacity: .6;
+    color: indigo;
+
+    transition: transform 1s ease-in-out 0.3s;
+}
+#lateral:hover{
+    transform: rotate(-5deg);
+}
+
+article {
+    text-align: left;
+    background: #CCCCCC;
+    border: .1rem solid #0e0016;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+article footer {
+    text-align: right;
+}
+
+#pie {
+    clear: both;
+    background: #0e0016;
+    border: .1rem solid indigo;
+    text-align: center;
+    color: gray;
+    padding: 20px;
+}
+
+a { color: indigo; }
+
+h2 { font-family: "Calibri Light"; font-size: 1.4rem ; color: indigo; }
+h4 { font-family: "Calibri Light"; font-size: 1.2rem ; color: indigo; }

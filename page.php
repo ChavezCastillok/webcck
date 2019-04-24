@@ -3,14 +3,11 @@
 class Page {
     // atributos
     public $content;
-    public $title = 'Soluciones CCK';
-    public $subtitle = 'Web personal. En el contexto de la informática y la programación';
+    public $title = 'Chavez Castillo Kevin';
     public $keywords = 'Soluciones CCK, Chavez Castillo Kevin';
     public $buttons = array(
         'Principal' => 'home.php',
-        'Servicios' => 'services.php',
-        'Contacto' => 'contact.php',
-        'Mapa del sitio' => 'map.php'
+        'Contacto' => 'contact.php'
     );
 
     // operaciones o metodos
@@ -46,10 +43,7 @@ class Page {
         ?>
         <header id="cabecera">
             <img id='logo' src="images/logoCk.png" width="120" height="120">
-            <hgroup>
-                <h1 id="titulo"><?php echo $this->title; ?></h1>
-                <h2><?php echo $this->subtitle; ?></h2>
-            </hgroup>
+            <h1 id="titulo"><?php echo $this->title; ?></h1>
         </header>
         <?php
     }
@@ -84,7 +78,7 @@ class Page {
         ?>
         <footer id="pie">
             <small>Sitio desarrollado por <a href="http://www.twitter.com/ChavezCastillok"><em>Kevin Chavez Castillo</em></a> en julio/2018.</small><br>
-            <small>Actualizado al 21/4/2019.</small>
+            <small>Actualizado al 23/4/2019.</small>
         </footer>
         <?php
     }
