@@ -38,21 +38,28 @@ header, table, section, footer, aside, nav, article, figure, figcaption, label {
     color: #cccccc;
 }
 #menu {
-    float: right;
-    width: 16%;
+    overflow: hidden;
+    padding: .5rem; /* arriba, derecha, abajo, izquierda*/
     min-width: 200px;
 }
-
-#menu li {
-    font-size: 1.2rem;
-    list-style-type: none;
-    border-radius: 1rem;
-    background: #0e0016;
-    margin: .8rem 0rem;
-    padding: .4rem 1rem; /* arriba, derecha, abajo, izquierda*/
-    border: .1rem solid indigo;
+#menu ul {
+    list-style: none;
+    margin: 0 2% 0 2%;
 }
-#menu a {
+
+#menu ul li {
+    float: left;
+    font-size: 1.2rem;
+    border: .1rem solid indigo;
+    border-radius: .8rem;
+    background: #0e0016;
+    margin: 0 .5rem .5rem 0;
+    padding: .4rem 1rem;
+    text-align: center;
+    min-width: 80px;
+}
+
+#menu ul li a {
     display: block;
 }
 
@@ -60,27 +67,14 @@ a:hover {
     color: yellow;
 }
 
-#seccion {
+.seccion {
     float: left;
-    width: 70%;
     min-width: 240px;
-    margin: .8rem 0rem;
-    padding: .4rem .6rem;
+    margin: .4rem .2rem .4rem .2rem;
+    padding: 2% 2% 2% 2%;
     background-color: grey;
-    opacity: .6;
-    color: indigo;
-}
-
-#boxformc {
-    float: left;
-    text-align: left;
-    width: 30%;
-    min-width: 220px;
-    margin: .8rem auto .8rem auto;
-    padding: 1rem 1rem;
-    background-color: grey;
-    opacity: .6;
-    color: indigo;
+    opacity: .8;
+    color: white;
 }
 
 input, textarea {
@@ -145,5 +139,6 @@ article footer {
 
 a { color: indigo; }
 
-h2 { font-family: "Calibri Light"; font-size: 1.4rem ; color: indigo; }
+h2 { font-family: "Calibri Light"; font-size: 1.6rem ; color: indigo; }
+h3 { font-family: "Calibri Light"; font-size: 1.4rem ; color: indigo; }
 h4 { font-family: "Calibri Light"; font-size: 1.2rem ; color: indigo; }

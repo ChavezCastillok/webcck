@@ -7,8 +7,7 @@ class Page {
     public $keywords = 'Chavez Castillo Kevin, desarrollador web, php';
     public $buttons = array(
         'Principal' => 'index.php',
-        'Contacto' => 'contact.php',
-        'Zona Roja' => 'zonered.php'
+        'Dev...' => 'zonered.php'
     );
 
     // operaciones o metodos
@@ -26,7 +25,6 @@ class Page {
         $this -> DisplayHeader();
         $this -> DisplayMenu($this->buttons);
         echo $this->content;
-        $this -> DisplayLateral();
         $this -> DisplayFooter();
         echo "</body>\n</html>\n";
     }
@@ -34,12 +32,15 @@ class Page {
     public function DisplayTitle(){
         echo '<title> '.$this->title.' </title>';
     }
+
     public function DisplayKeywords(){
         echo "<meta name=\"keywords\" content=\"".htmlentities($this->keywords)."\">\n";
     }
+
     public function DisplayStyles(){
         echo "<link rel=\"stylesheet\" href=\"styles/estilos1.css\">\n";
     }
+
     public function DisplayHeader(){
         ?>
         <header id="cabecera">
@@ -48,6 +49,7 @@ class Page {
         </header>
         <?php
     }
+
     public function DisplayMenu($buttons){
         echo "<nav id='menu'>\n<ul>\n";
         foreach ($buttons as $name=>$url){
@@ -55,14 +57,7 @@ class Page {
         }
         echo "</ul>\n</nav>\n";
     }
-    public function DisplayLateral(){
-        ?>
-        <aside id='lateral'>
-            En Twitter:<br>
-            <a href='http://www.twitter.com/ChavezCastillok'><em>@ChavezCastillok</em></a>
-        </aside>
-        <?php
-    }
+
     public function IsURLCurrentPage($url){
         if(strpos($_SERVER('PHP_SELF'), $url) === false){
             return false;
@@ -70,6 +65,7 @@ class Page {
             return true;
         }
     }
+
     public function DisplayButton($name, $url, $active = true){
         if ($active) {
             echo '<li><a href="'.htmlentities($url).'">'.$name.'</a></li>';
@@ -77,11 +73,13 @@ class Page {
             echo '<li>'.$name.'</li>';
         }
     }
+
     public function DisplayFooter(){
         ?>
         <footer id="pie">
-            <small>Desarrollo del sitio iniciado en julio/2018.</small><br>
-            <small>Actualizado al 9/5/2019.</small>
+            <small>julio/2018 - 2019</small><br>
+            <small>Ubicación: <em>San Cristóbal, Venezuela.</em></small><br>
+            <small>Contacto vía Email: <a href="mailto:socialcck@outlook.com">socialcck@outlook.com</a></small>
         </footer>
         <?php
     }
