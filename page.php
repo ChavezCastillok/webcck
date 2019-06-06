@@ -6,8 +6,9 @@ class Page {
     public $title = 'Chavez Castillo Kevin';
     public $keywords = 'Chavez Castillo Kevin, desarrollador web, php';
     public $buttons = array(
-        'Principal' => 'index.php',
-        'Dev...' => 'zonered.php'
+        'CCKevin' => 'index.php',
+        'Dev...lab' => 'zonered.php',
+        'Mi Blog' => 'blog.php'
     );
 
     // operaciones o metodos
@@ -51,11 +52,14 @@ class Page {
     }
 
     public function DisplayMenu($buttons){
-        echo "<nav id='menu'>\n<ul>\n";
+        echo "<nav id='menu'>\n";
+        echo "<h2 class='titulomenu'>Páginas</h2>\n";
+        echo "<ul>\n";
         foreach ($buttons as $name=>$url){
-        $this->DisplayButton($name, $url, /*!$this->IsURLCurrentPage($url)*/); // revisar porque no funca
+            $this->DisplayButton($name, $url, /*!$this->IsURLCurrentPage($url)*/); // revisar porque no funca
         }
-        echo "</ul>\n</nav>\n";
+        echo "</ul>\n";
+        echo "</nav>\n";
     }
 
     public function IsURLCurrentPage($url){
@@ -77,9 +81,9 @@ class Page {
     public function DisplayFooter(){
         ?>
         <footer id="pie">
-            <small>julio/2018 - 2019</small><br>
             <small>Ubicación: <em>San Cristóbal, Venezuela.</em></small><br>
-            <small>Contacto vía Email: <a href="mailto:socialcck@outlook.com">socialcck@outlook.com</a></small>
+            <small>Contacto vía Email: <a id='mail' href="mailto:socialcck@outlook.com">socialcck@outlook.com</a></small><br>
+            <small>07/2018 - <?php echo date('m/Y'); ?></small>
         </footer>
         <?php
     }
